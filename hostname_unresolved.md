@@ -1,25 +1,28 @@
-# Hey again, Do you face the following error?
------
+# Problem:
+
 sudo: unable to resolve host <hostname>
------
+
+# Reason:
+  
 This may be the result of a recent change in hostname on your linux subsystem
 Your new hostname isnt added in the 'hosts' file
-<br>
-# Solution???
-## Its a lengthy process.........no, I'm just playing
-## All you have to do is 
------
+  
+# Solution?
+```bash
 cd /etc
------
-### Youll find a 'hosts' file.
-### Using sudo, open your hosts file in write mode and add the following sentence
--> 
-### 127.0.0.1 <new_hostname>
-### for eg: if my hostname is newhost
-### ADD the following to the hosts file
+```
+- Navigate to the 'hosts' file.
+- Using sudo, open your hosts file in write mode and add the following sentence
 
-## '127.0.0.1 newhost'
+```bash 
+  127.0.0.1 <new_hostname>
+  ```
+
 # DONE??
-### close the editor and try sudo
-### Woah!! The error is gone! So am I ?
-### Until Next time! Bye!
+- save and close the editor and try sudo
+- Run
+  ```bash
+  sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y
+  ```
+# Concluding remarks
+  Woah!! The error is gone! So am I ? Until Next time! Bye!
